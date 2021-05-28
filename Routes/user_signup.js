@@ -19,14 +19,4 @@ router.post("/", async (req, res) => {
   });
 });
 
-<<<<<<< HEAD
-
 module.exports = router;
-//comment line
-
-
-
-
-=======
-module.exports = router;
->>>>>>> 352525d02ce7de119c41d6df89797c9f56dad2c7
