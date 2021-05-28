@@ -19,6 +19,4 @@ router.post('/', async(req,res)=>{
     }) 
 });
 
-//dhshfb,jhbvj,hv,bfm,bvh,fj
-
 module.exports = router;
