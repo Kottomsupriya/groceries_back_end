@@ -20,7 +20,3 @@ router.post("/", async (req, res) => {
 });
 
 module.exports = router;
-<<<<<<< HEAD
-//lines
-=======
->>>>>>> 51294b89cbd2670e6b9555afbd7c92c3159c881a
