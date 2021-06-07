@@ -2,16 +2,14 @@ const express = require('express');
 const app = express();
 const port= 4500;
 const cors = require('cors');
-const path = require('path');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const multer = require('multer');
 const user_login = require('./Routes/user_login');
 const vendor_login = require('./Routes/vendor_login');
 const user_signup = require('./Routes/user_signup');
 const vendor_signup = require('./Routes/vendor_signup');
 const stock_upload = require('./Routes/stock_upload');
-const vendor_stock = require('./Routes/vendor_stock')
+const vendor_stock = require('./Routes/vendor_stock');
+const stock_search = require('./Routes/stock_search');
 
 
 mongoose.connect('mongodb://127.0.0.1:27017/g_store',{
@@ -24,7 +22,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/g_store',{
 app.use(cors());
 app.use(express.json());
 
-
 app.use(express.json());
 app.use(express.urlencoded({extended : false}));
 app.use(express.static('public'));
@@ -35,6 +32,7 @@ app.use('/user-signup',user_signup);
 app.use('/vendor-signup',vendor_signup);
 app.use('/stock-upload',stock_upload);
 app.use('/vendor-stock',vendor_stock);
+app.use('/stock-search',stock_search);
 
 app.listen(port,()=>{
     console.log(`App running localhost ${port}`);
