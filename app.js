@@ -10,7 +10,8 @@ const vendor_signup = require('./Routes/vendor_signup');
 const stock_upload = require('./Routes/stock_upload');
 const vendor_stock = require('./Routes/vendor_stock');
 const stock_search = require('./Routes/stock_search');
-
+const stock_update = require('./Routes/stock_update');
+const stock_delete = require('./Routes/stock_delete');
 
 mongoose.connect('mongodb://127.0.0.1:27017/g_store',{
     useUnifiedTopology: true,
@@ -33,6 +34,8 @@ app.use('/vendor-signup',vendor_signup);
 app.use('/stock-upload',stock_upload);
 app.use('/vendor-stock',vendor_stock);
 app.use('/stock-search',stock_search);
+app.use('/stock-update',stock_update);
+app.use('/delete-stock',stock_delete);
 
 app.listen(port,()=>{
     console.log(`App running localhost ${port}`);

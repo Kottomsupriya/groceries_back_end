@@ -6,6 +6,7 @@ router.post(('/'), async(req, res) => {
     const category = req.body.category;
     const title = req.body.title;
     const quantity = req.body.quantity;
+    const totalStock = req.body.totalStock;
     const units = req.body.units;
     const price = req.body.price;
     const description = req.body.description;
@@ -16,17 +17,13 @@ router.post(('/'), async(req, res) => {
         category,
         title,
         quantity,
+        totalStock,
         units,
         price,
         description,
         company
     }
-
     console.log(newStockData);
-    // const newStock = new stock(newStockData);
-
-    // newStock.save().then(()=>res.json('Stock added'))
-    // .catch(err=>res.status(400).json('error occured'+err));
     stock(newStockData).save((err, result) => {
     if (err) console.log(err);
     res.status(201).json(result);

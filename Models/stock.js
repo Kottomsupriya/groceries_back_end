@@ -5,6 +5,7 @@ const stockSchema = mongoose.Schema({
     category:String,
     title:String,
     quantity:Number,
+    totalStock:Number,
     units:String,
     price:Number,
     description:String,
