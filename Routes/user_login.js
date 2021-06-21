@@ -17,7 +17,7 @@ let user_data={
     password:'',
     address:'',
     dob:'',
-    gender:''
+    gender:'',
 };
 router.post('/',async(req,res)=>{
     let entered_password=req.body.password;
